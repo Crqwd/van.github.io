@@ -2,6 +2,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Header scroll effect
     const header = document.querySelector('header');
+    
+    // Add subtle parallax effect to shapes
+    const shapes = document.querySelectorAll('.shape, .glow, .collaboration-shape, .collaboration-glow');
+    
+    if (shapes.length) {
+        window.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            shapes.forEach(shape => {
+                const speedX = parseFloat(shape.getAttribute('data-speed-x') || 20);
+                const speedY = parseFloat(shape.getAttribute('data-speed-y') || 20);
+                
+                const moveX = (x - 0.5) * speedX;
+                const moveY = (y - 0.5) * speedY;
+                
+                shape.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+    }
 
     function checkScroll() {
         if (window.scrollY > 20) {

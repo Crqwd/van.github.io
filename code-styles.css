@@ -213,9 +213,93 @@ nav a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.wlfw.org/wp-content/uploads/2021/10/20190711_091702-1-scaled-1-900x506.jpg') no-repeat center/cover;
     opacity: 0.1;
     z-index: 0;
+}
+
+/* Hero Background Elements */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -150px;
+    background: var(--code-green-dark);
+}
+
+.shape-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    right: 20%;
+    background: var(--code-green);
+}
+
+.shape-3 {
+    width: 350px;
+    height: 350px;
+    bottom: 20%;
+    left: -100px;
+    background: var(--code-green-light);
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.glow-1 {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    right: -200px;
+    background: rgba(0, 204, 102, 0.07);
+}
+
+.glow-2 {
+    width: 500px;
+    height: 500px;
+    bottom: -200px;
+    left: -100px;
+    background: rgba(0, 204, 102, 0.05);
+}
+
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    opacity: 0.4;
+    z-index: -1;
 }
 
 .hero-content {
@@ -283,6 +367,58 @@ nav a.active {
 
 .tech-icon.html {
     background: linear-gradient(135deg, #e44d26, #0170ba);
+}
+
+/* Code Background */
+.code-background {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 600px;
+    overflow: auto;
+}
+
+.code-background pre {
+    margin: 0;
+    font-family: var(--code-font);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--code-text);
+}
+
+.code-background code {
+    display: block;
+}
+
+/* Code line styling - each line will wrap individually */
+.code-line {
+    display: block; 
+    white-space: pre;
+}
+
+@media (max-width: 576px) and (orientation: portrait) {
+    /* Only apply these styles on phones in portrait mode */
+    .code-background {
+        width: 90%;
+        max-width: 90%;
+        padding: 12px;
+    }
+    
+    .code-line {
+        white-space: pre-wrap !important; /* Force wrapping */
+        display: inline-block;
+        width: 100%;
+        overflow-wrap: break-word;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
 }
 
 /* Main Content */
@@ -1103,7 +1239,7 @@ main {
 
 /* Collaboration Section */
 .collaboration-section {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #081808 100%);
     padding: var(--space-xxl) var(--space-xl);
     position: relative;
     overflow: hidden;
@@ -1116,9 +1252,92 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.wlfw.org/wp-content/uploads/2021/10/20190711_091702-1-scaled-1-900x506.jpg') no-repeat center/cover;
     opacity: 0.05;
     z-index: 0;
+}
+
+.collaboration-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.collaboration-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.collaboration-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+}
+
+.collaboration-shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    right: 10%;
+    background: var(--code-green-dark);
+}
+
+.collaboration-shape-2 {
+    width: 250px;
+    height: 250px;
+    bottom: -30px;
+    right: 30%;
+    background: var(--code-green);
+}
+
+.collaboration-shape-3 {
+    width: 280px;
+    height: 280px;
+    top: 20%;
+    left: -80px;
+    background: var(--code-green-light);
+}
+
+.collaboration-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.collaboration-glow-1 {
+    width: 450px;
+    height: 450px;
+    top: -150px;
+    right: -100px;
+    background: rgba(0, 204, 102, 0.07);
+}
+
+.collaboration-glow-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    left: -50px;
+    background: rgba(0, 204, 102, 0.05);
+}
+
+.collaboration-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    opacity: 0.4;
+    z-index: -1;
 }
 
 .collaboration-container {

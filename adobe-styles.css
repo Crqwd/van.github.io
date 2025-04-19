@@ -210,9 +210,93 @@ nav a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.wlfw.org/wp-content/uploads/2021/10/20190711_091702-1-scaled-1-900x506.jpg') no-repeat center/cover;
     opacity: 0.1;
     z-index: 0;
+}
+
+/* Hero Background Elements */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -150px;
+    background: var(--adobe-red-dark);
+}
+
+.shape-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    right: 20%;
+    background: var(--adobe-red);
+}
+
+.shape-3 {
+    width: 350px;
+    height: 350px;
+    bottom: 20%;
+    left: -100px;
+    background: var(--adobe-red-light);
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.glow-1 {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    right: -200px;
+    background: rgba(255, 0, 0, 0.07);
+}
+
+.glow-2 {
+    width: 500px;
+    height: 500px;
+    bottom: -200px;
+    left: -100px;
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    opacity: 0.4;
+    z-index: -1;
 }
 
 .hero-content {
@@ -1024,7 +1108,7 @@ main {
 
 /* Collaboration Section */
 .collaboration-section {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0808 100%);
     padding: var(--space-xxl) var(--space-xl);
     position: relative;
     overflow: hidden;
@@ -1037,9 +1121,92 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.wlfw.org/wp-content/uploads/2021/10/20190711_091702-1-scaled-1-900x506.jpg') no-repeat center/cover;
     opacity: 0.05;
     z-index: 0;
+}
+
+.collaboration-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.collaboration-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.collaboration-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+}
+
+.collaboration-shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    right: 10%;
+    background: var(--adobe-red-dark);
+}
+
+.collaboration-shape-2 {
+    width: 250px;
+    height: 250px;
+    bottom: -30px;
+    right: 30%;
+    background: var(--adobe-red);
+}
+
+.collaboration-shape-3 {
+    width: 280px;
+    height: 280px;
+    top: 20%;
+    left: -80px;
+    background: var(--adobe-red-light);
+}
+
+.collaboration-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.collaboration-glow-1 {
+    width: 450px;
+    height: 450px;
+    top: -150px;
+    right: -100px;
+    background: rgba(255, 0, 0, 0.07);
+}
+
+.collaboration-glow-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    left: -50px;
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.collaboration-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    opacity: 0.4;
+    z-index: -1;
 }
 
 .collaboration-container {
