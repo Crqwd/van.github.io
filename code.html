@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Portfolio</title>
     <link rel="stylesheet" href="code-styles.css">
+    <link rel="stylesheet" href="green-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -52,6 +53,108 @@
         </div>
     </section>
 
+    <!-- SVG Definitions -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <!-- Weather API Icon -->
+        <symbol id="weather-api-icon" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="weather-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4ab1eb" />
+                    <stop offset="100%" stop-color="#7cd4f0" />
+                </linearGradient>
+                <linearGradient id="green-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4ab575" />
+                    <stop offset="100%" stop-color="#3a9158" />
+                </linearGradient>
+                <filter id="weather-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+            </defs>
+            <rect x="20" y="40" width="160" height="120" rx="10" fill="#2a3142" />
+            <rect x="35" y="55" width="130" height="30" rx="5" fill="#3a4254" />
+            <circle cx="140" cy="70" r="12" fill="url(#weather-gradient)" filter="url(#weather-glow)" />
+            <path d="M140,63 L140,77 M133,70 L147,70" stroke="#fff" stroke-width="2" />
+            <circle cx="50" cy="110" r="22" fill="#f5d742" filter="url(#weather-glow)" />
+            <path d="M85,100 L145,100 M85,110 L135,110 M85,120 L140,120" stroke="#3a4254" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+            <rect x="30" y="150" width="140" height="10" rx="5" fill="url(#green-accent)" opacity="0.8" />
+            <circle cx="110" cy="155" r="4" fill="#fff" />
+            <circle cx="125" cy="155" r="4" fill="#fff" />
+            <circle cx="140" cy="155" r="4" fill="#fff" />
+        </symbol>
+
+        <!-- Light Dark Mode Switch Icon -->
+        <symbol id="theme-switch-icon" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="theme-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2c3e50" />
+                    <stop offset="100%" stop-color="#4a6491" />
+                </linearGradient>
+                <linearGradient id="mode-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4ab575" />
+                    <stop offset="100%" stop-color="#7cd49c" />
+                </linearGradient>
+                <filter id="theme-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+            </defs>
+            <rect x="30" y="50" width="140" height="100" rx="10" fill="url(#theme-gradient)" />
+            <circle cx="100" cy="100" r="35" fill="#f3f3f3" filter="url(#theme-glow)" />
+            <path d="M100,70 L100,85 M100,115 L100,130 M70,100 L85,100 M115,100 L130,100" stroke="#2c3e50" stroke-width="3" />
+            <path d="M80,80 L90,90 M110,110 L120,120 M80,120 L90,110 M120,80 L110,90" stroke="#2c3e50" stroke-width="3" />
+            <circle cx="150" cy="60" r="10" fill="url(#mode-gradient)" filter="url(#theme-glow)" />
+            <path d="M30,165 C30,160 35,155 40,155 L160,155 C165,155 170,160 170,165" stroke="url(#mode-gradient)" stroke-width="2" fill="none" />
+            <path d="M35,165 L50,165 M60,165 L75,165 M85,165 L100,165 M110,165 L125,165 M135,165 L150,165 M160,165 L175,165" stroke="url(#mode-gradient)" stroke-width="2" />
+        </symbol>
+
+        <!-- Java User Registration Icon -->
+        <symbol id="java-registration-icon" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="java-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#5382a1" />
+                    <stop offset="100%" stop-color="#f89820" />
+                </linearGradient>
+                <linearGradient id="java-green" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4ab575" />
+                    <stop offset="100%" stop-color="#7cd49c" />
+                </linearGradient>
+                <filter id="java-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+            </defs>
+            <rect x="40" y="35" width="120" height="130" rx="10" fill="#21272e" />
+            <circle cx="100" cy="75" r="20" fill="#384753" stroke="url(#java-green)" stroke-width="2" />
+            <rect x="60" y="115" width="80" height="10" rx="5" fill="#384753" />
+            <rect x="60" y="135" width="80" height="10" rx="5" fill="#384753" />
+
+        </symbol>
+
+        <!-- Python Authentication Icon -->
+        <symbol id="python-auth-icon" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="python-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3776ab" />
+                    <stop offset="100%" stop-color="#ffd43b" />
+                </linearGradient>
+                <linearGradient id="py-green" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3a9158" />
+                    <stop offset="100%" stop-color="#4ab575" />
+                </linearGradient>
+                <filter id="python-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+            </defs>
+            <rect x="45" y="45" width="110" height="110" rx="10" fill="#282c34" />
+            <rect x="60" y="65" width="80" height="35" rx="5" fill="#3c4252" />
+            <rect x="70" y="80" width="60" height="10" rx="3" fill="#1e2127" />
+            <circle cx="100" cy="125" r="18" fill="#3c4252" />
+            <path d="M91,125 Q94.5,128 98,131 Q103,126 109,121" stroke="url(#py-green)" stroke-width="3" fill="none" filter="url(#python-glow)" />
+        </symbol>
+    </svg>
+
     <!-- Main Content -->
     <main>
         <!-- Category Header with Icons -->
@@ -85,8 +188,10 @@
                                 <span>REST API</span>
                             </div>
                         </div>
-                        <div class="card-image">
-                            <img src="https://www.wlfw.org/wp-content/uploads/2021/10/20190711_091702-1-scaled-1-900x506.jpg" alt="Interactive Portfolio">
+                        <div class="card-image svg-container">
+                            <svg class="project-svg">
+                                <use href="#weather-api-icon"></use>
+                            </svg>
                         </div>
                         <div class="card-content">
                             <p>A weather application that fetches current conditions and forecasts from a public API, with responsive design and user-friendly interface for location searches.</p>
@@ -105,8 +210,10 @@
                                 <span>UX Design</span>
                             </div>
                         </div>
-                        <div class="card-image">
-                            <img src="https://www.wlfw.org/wp-content/uploads/2021/10/20190711_091702-1-scaled-1-900x506.jpg" alt="Dashboard App">
+                        <div class="card-image svg-container">
+                            <svg class="project-svg">
+                                <use href="#theme-switch-icon"></use>
+                            </svg>
                         </div>
                         <div class="card-content">
                             <p>A theme toggle component that allows users to switch between light and dark modes with smooth transitions and persistent user preferences.</p>
@@ -136,8 +243,10 @@
                                 <span>JPA</span>
                             </div>
                         </div>
-                        <div class="card-image">
-                            <img src="https://www.wlfw.org/wp-content/uploads/2021/10/20190711_091702-1-scaled-1-900x506.jpg" alt="RESTful API">
+                        <div class="card-image svg-container">
+                            <svg class="project-svg">
+                                <use href="#java-registration-icon"></use>
+                            </svg>
                         </div>
                         <div class="card-content">
                             <p>A secure user registration system built with Java, Spring Boot, and JPA that handles account creation, data validation, and secure password storage.</p>
@@ -156,8 +265,10 @@
                                 <span>JWT</span>
                             </div>
                         </div>
-                        <div class="card-image">
-                            <img src="https://www.wlfw.org/wp-content/uploads/2021/10/20190711_091702-1-scaled-1-900x506.jpg" alt="Microservices">
+                        <div class="card-image svg-container">
+                            <svg class="project-svg">
+                                <use href="#python-auth-icon"></use>
+                            </svg>
                         </div>
                         <div class="card-content">
                             <p>A Python-based user authentication system with Flask and JWT that manages login sessions, password security, and role-based access control.</p>

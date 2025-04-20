@@ -141,18 +141,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoLinks = document.querySelectorAll('.video-link');
     const videoModal = document.getElementById('video-modal');
     const videoFrame = document.getElementById('video-frame');
+    // We'll get modalContent when needed instead of storing it as a constant
 
-    if (videoLinks.length > 0 && videoModal && videoFrame) {
+    if (videoLinks.length > 0 && videoModal) {
         const videoClose = videoModal.querySelector('.modal-close');
 
         videoLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const videoUrl = link.getAttribute('href');
-                videoFrame.src = videoUrl;
+                console.log('Video link clicked:', videoUrl);
+                
+                // Get the modal content element
+                const modalContent = videoModal.querySelector('.modal-content');
+                console.log('Modal content element:', modalContent);
+                
+                // Check if it's a local MP4 file
+                if (videoUrl.endsWith('.mp4')) {
+                    console.log('Creating video element for MP4 file');
+                    // Create video element instead of using iframe
+                    modalContent.innerHTML = `<video id="video-player" controls autoplay style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; width: 100%; height: 100%; object-fit: contain;">
+                        <source src="${videoUrl}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>`;
+                    console.log('Video element created:', modalContent.innerHTML);
+                } else {
+                    // Use iframe for YouTube or other embeds
+                    modalContent.innerHTML = `<iframe id="video-frame" frameborder="0" allowfullscreen src="${videoUrl}" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; width: 100%; height: 100%; object-fit: contain;"></iframe>`;
+                }
+                
+                // Show the modal with improved visibility and positioning
                 videoModal.style.display = 'flex';
                 videoModal.style.alignItems = 'center';
                 videoModal.style.justifyContent = 'center';
+                videoModal.style.zIndex = '2000';
+                console.log('Video modal displayed:', videoModal.style.display);
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
             });
         });
@@ -161,7 +184,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (videoClose) {
             videoClose.addEventListener('click', () => {
                 videoModal.style.display = 'none';
-                videoFrame.src = ''; // Stop video playback
+                // Get modal content
+                const modalContent = videoModal.querySelector('.modal-content');
+                if (modalContent) {
+                    modalContent.innerHTML = ''; // Remove video element to stop playback
+                }
                 document.body.style.overflow = 'auto'; // Re-enable scrolling
             });
         }
@@ -170,7 +197,11 @@ document.addEventListener('DOMContentLoaded', () => {
         videoModal.addEventListener('click', (e) => {
             if (e.target === videoModal) {
                 videoModal.style.display = 'none';
-                videoFrame.src = ''; // Stop video playback
+                // Get modal content
+                const modalContent = videoModal.querySelector('.modal-content');
+                if (modalContent) {
+                    modalContent.innerHTML = ''; // Remove video element to stop playback
+                }
                 document.body.style.overflow = 'auto';
             }
         });
@@ -186,9 +217,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close video modal if open
-    if (videoModal && videoModal.style.display === 'block') {
+    if (videoModal && (videoModal.style.display === 'block' || videoModal.style.display === 'flex')) {
     videoModal.style.display = 'none';
-    if (videoFrame) videoFrame.src = ''; // Stop video playback
+    const modalContent = videoModal.querySelector('.modal-content');
+    if (modalContent) modalContent.innerHTML = ''; // Remove video element to stop playback
     document.body.style.overflow = 'auto';
     }
     }

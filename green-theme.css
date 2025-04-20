@@ -1,0 +1,84 @@
+/* Green SVG Container Styles */
+.svg-container {
+    background: linear-gradient(to bottom, rgba(74, 181, 117, 0.03), rgba(74, 181, 117, 0.07)) !important;
+    border-bottom: 1px solid rgba(74, 181, 117, 0.1) !important;
+}
+
+/* SVG Hover Effect with Green */
+.project-card:hover .svg-container {
+    background: linear-gradient(to bottom, rgba(74, 181, 117, 0.07), rgba(74, 181, 117, 0.12)) !important;
+}
+
+/* SVG Styling with Green Glow */
+.project-svg {
+    filter: drop-shadow(0 4px 8px rgba(74, 181, 117, 0.2)) !important;
+}
+
+.project-card:hover .project-svg {
+    filter: drop-shadow(0 8px 20px rgba(74, 181, 117, 0.35)) !important;
+}
+
+/* Green Card Header and Footer */
+.project-card .card-header {
+    border-bottom: 1px solid rgba(74, 181, 117, 0.15) !important;
+    background: linear-gradient(to right, rgba(74, 181, 117, 0.07), transparent) !important;
+}
+
+.project-card .card-content {
+    background: linear-gradient(to bottom, rgba(74, 181, 117, 0.04), transparent) !important;
+}
+
+/* Green Tag Colors */
+.project-card .card-tags span {
+    background-color: rgba(74, 181, 117, 0.1) !important;
+    color: rgba(124, 212, 156, 0.9) !important;
+    border: 1px solid rgba(74, 181, 117, 0.15) !important;
+}
+
+/* Green View Code Indicator */
+.view-code-indicator {
+    background-color: rgba(74, 181, 117, 0.9) !important;
+    box-shadow: 0 2px 8px rgba(58, 145, 88, 0.3) !important;
+    border: 1px solid rgba(124, 212, 156, 0.3) !important;
+}
+
+/* Green Card Glow Effects - One unified animation */
+@keyframes greenPulseGlow {
+    0% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(74, 181, 117, 0.3);
+    }
+    100% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px 3px rgba(74, 181, 117, 0.3);
+    }
+}
+
+.project-card:hover {
+    animation: greenPulseGlow 1.5s infinite alternate !important;
+    border-color: rgba(74, 181, 117, 0.2) !important;
+}
+
+/* Override any other animations */
+#frontend-projects .project-card:hover,
+#backend-projects .project-card:hover {
+    animation: greenPulseGlow 1.5s infinite alternate !important;
+}
+
+/* Green Modal */
+.code-modal-header {
+    border-bottom: 1px solid rgba(74, 181, 117, 0.15) !important;
+    background: linear-gradient(to right, rgba(74, 181, 117, 0.07), rgba(20, 20, 20, 0.8)) !important;
+}
+
+.code-modal-footer {
+    border-top: 1px solid rgba(74, 181, 117, 0.15) !important;
+    background: linear-gradient(to left, rgba(74, 181, 117, 0.07), rgba(20, 20, 20, 0.8)) !important;
+}
+
+.code-modal-content {
+    border: 1px solid rgba(74, 181, 117, 0.2) !important;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(74, 181, 117, 0.1) !important;
+}
+
+.modal-close:hover {
+    color: var(--code-green) !important;
+}

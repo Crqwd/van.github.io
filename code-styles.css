@@ -1,9 +1,9 @@
 /* Code Showcase Styles */
 :root {
     /* Main Colors */
-    --code-green: #00cc66;
-    --code-green-dark: #009900;
-    --code-green-light: #33ff99;
+    --code-green: #4ab575;
+    --code-green-dark: #3a9158;
+    --code-green-light: #7cd49c;
 
     /* Tech-specific Colors */
     --js-yellow: #F7DF1E;
@@ -201,7 +201,7 @@ nav a.active {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--dark-bg), #081808);
+    background: linear-gradient(135deg, var(--dark-bg), #0b1f12);
     position: relative;
     overflow: hidden;
 }
@@ -278,7 +278,7 @@ nav a.active {
     height: 600px;
     top: -200px;
     right: -200px;
-    background: rgba(0, 204, 102, 0.07);
+    background: rgba(74, 181, 117, 0.07);
 }
 
 .glow-2 {
@@ -286,7 +286,7 @@ nav a.active {
     height: 500px;
     bottom: -200px;
     left: -100px;
-    background: rgba(0, 204, 102, 0.05);
+    background: rgba(74, 181, 117, 0.05);
 }
 
 .grid {
@@ -468,7 +468,7 @@ main {
 .category-icon.active {
     color: var(--code-green);
     font-weight: 500;
-    background-color: rgba(0, 204, 102, 0.1);
+    background-color: rgba(74, 181, 117, 0.1);
 }
 
 /* Backend Projects Layout */
@@ -785,10 +785,10 @@ main {
 
 @keyframes pulseGlow {
     0% {
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 204, 102, 0.3);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(74, 181, 117, 0.3);
     }
     100% {
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px 3px rgba(0, 204, 102, 0.2);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px 3px rgba(74, 181, 117, 0.2);
     }
 }
 
@@ -864,6 +864,8 @@ main {
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+/* This style is replaced with more comprehensive styles above */
 
 .frontend-project:hover .project-image img {
     transform: scale(1.05);
@@ -1239,7 +1241,7 @@ main {
 
 /* Collaboration Section */
 .collaboration-section {
-    background: linear-gradient(135deg, #0a0a0a 0%, #081808 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #0b1f12 100%);
     padding: var(--space-xxl) var(--space-xl);
     position: relative;
     overflow: hidden;
@@ -1316,7 +1318,7 @@ main {
     height: 450px;
     top: -150px;
     right: -100px;
-    background: rgba(0, 204, 102, 0.07);
+    background: rgba(74, 181, 117, 0.07);
 }
 
 .collaboration-glow-2 {
@@ -1324,7 +1326,7 @@ main {
     height: 400px;
     bottom: -150px;
     left: -50px;
-    background: rgba(0, 204, 102, 0.05);
+    background: rgba(74, 181, 117, 0.05);
 }
 
 .collaboration-grid {
@@ -1650,9 +1652,246 @@ main {
     color: #B5CEA8; /* Light green for numbers */
 }
 
-.code-modal-body code .type,
 .code-modal-body code .teal {
     color: #4EC9B0; /* Teal for types */
+}
+
+/* SVG Container Theme Styles */
+.svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    height: 240px;
+}
+
+/* Themed backgrounds for each project container */
+#frontend-projects .project-card:nth-child(1) .svg-container {
+    background: linear-gradient(135deg, #0c2e4e 0%, #1e3c5a 100%);
+}
+
+#frontend-projects .project-card:nth-child(2) .svg-container {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
+}
+
+#backend-projects .project-card:nth-child(1) .svg-container {
+    background: linear-gradient(135deg, #1e2736 0%, #293847 100%);
+}
+
+#backend-projects .project-card:nth-child(2) .svg-container {
+    background: linear-gradient(135deg, #242736 0%, #2c3142 100%); 
+}
+
+/* Theme-specific hover effects */
+#frontend-projects .project-card:nth-child(1):hover .svg-container {
+    background: linear-gradient(135deg, #133a64 0%, #265277 100%);
+}
+
+#frontend-projects .project-card:nth-child(2):hover .svg-container {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+}
+
+#backend-projects .project-card:nth-child(1):hover .svg-container {
+    background: linear-gradient(135deg, #263545 0%, #344959 100%);
+}
+
+#backend-projects .project-card:nth-child(2):hover .svg-container {
+    background: linear-gradient(135deg, #2e3040 0%, #373c52 100%);
+}
+
+/* Themed Card Header Styles */
+#frontend-projects .project-card:nth-child(1) .card-header {
+    background: linear-gradient(to right, rgba(74, 177, 235, 0.1), transparent);
+    border-bottom: 1px solid rgba(74, 177, 235, 0.2);
+}
+
+#frontend-projects .project-card:nth-child(2) .card-header {
+    background: linear-gradient(to right, rgba(44, 62, 80, 0.1), transparent);
+    border-bottom: 1px solid rgba(44, 62, 80, 0.2);
+}
+
+#backend-projects .project-card:nth-child(1) .card-header {
+    background: linear-gradient(to right, rgba(83, 130, 161, 0.1), transparent);
+    border-bottom: 1px solid rgba(83, 130, 161, 0.2);
+}
+
+#backend-projects .project-card:nth-child(2) .card-header {
+    background: linear-gradient(to right, rgba(55, 118, 171, 0.1), transparent);
+    border-bottom: 1px solid rgba(55, 118, 171, 0.2);
+}
+
+/* Themed Card Tag Colors */
+#frontend-projects .project-card:nth-child(1) .card-tags span {
+    background-color: rgba(74, 177, 235, 0.15);
+    color: rgba(124, 212, 240, 0.9);
+}
+
+#frontend-projects .project-card:nth-child(2) .card-tags span {
+    background-color: rgba(44, 62, 80, 0.15);
+    color: rgba(74, 106, 145, 0.9);
+}
+
+#backend-projects .project-card:nth-child(1) .card-tags span {
+    background-color: rgba(83, 130, 161, 0.15);
+    color: rgba(248, 152, 32, 0.9);
+}
+
+#backend-projects .project-card:nth-child(2) .card-tags span {
+    background-color: rgba(55, 118, 171, 0.15);
+    color: rgba(255, 212, 59, 0.9);
+}
+
+/* Themed View Code Indicators */
+#frontend-projects .project-card:nth-child(1) .view-code-indicator {
+    background-color: rgba(74, 177, 235, 0.9);
+}
+
+#frontend-projects .project-card:nth-child(2) .view-code-indicator {
+    background-color: rgba(44, 62, 80, 0.9);
+}
+
+#backend-projects .project-card:nth-child(1) .view-code-indicator {
+    background-color: rgba(83, 130, 161, 0.9);
+}
+
+#backend-projects .project-card:nth-child(2) .view-code-indicator {
+    background-color: rgba(55, 118, 171, 0.9);
+}
+
+/* SVG Styling with theme-specific effects */
+.project-svg {
+    width: 85%;
+    height: 85%;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.6s ease;
+}
+
+.project-card:hover .project-svg {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Weather API SVG specific styles */
+#frontend-projects .project-card:nth-child(1) .project-svg {
+    filter: drop-shadow(0 4px 10px rgba(74, 177, 235, 0.3));
+}
+
+#frontend-projects .project-card:nth-child(1):hover .project-svg {
+    filter: drop-shadow(0 8px 20px rgba(74, 177, 235, 0.5));
+}
+
+/* Theme Switch SVG specific styles */
+#frontend-projects .project-card:nth-child(2) .project-svg {
+    filter: drop-shadow(0 4px 10px rgba(44, 62, 80, 0.3));
+}
+
+#frontend-projects .project-card:nth-child(2):hover .project-svg {
+    filter: drop-shadow(0 8px 20px rgba(44, 62, 80, 0.5));
+}
+
+/* Java User Registration SVG specific styles */
+#backend-projects .project-card:nth-child(1) .project-svg {
+    filter: drop-shadow(0 4px 10px rgba(83, 130, 161, 0.3));
+}
+
+#backend-projects .project-card:nth-child(1):hover .project-svg {
+    filter: drop-shadow(0 8px 20px rgba(248, 152, 32, 0.5));
+}
+
+/* Python Authentication SVG specific styles */
+#backend-projects .project-card:nth-child(2) .project-svg {
+    filter: drop-shadow(0 4px 10px rgba(55, 118, 171, 0.3));
+}
+
+#backend-projects .project-card:nth-child(2):hover .project-svg {
+    filter: drop-shadow(0 8px 20px rgba(255, 212, 59, 0.5));
+}
+
+/* Themed Content Area */
+#frontend-projects .project-card:nth-child(1) .card-content {
+    background: linear-gradient(to bottom, rgba(74, 177, 235, 0.05), transparent);
+}
+
+#frontend-projects .project-card:nth-child(2) .card-content {
+    background: linear-gradient(to bottom, rgba(44, 62, 80, 0.05), transparent);
+}
+
+#backend-projects .project-card:nth-child(1) .card-content {
+    background: linear-gradient(to bottom, rgba(83, 130, 161, 0.05), transparent);
+}
+
+#backend-projects .project-card:nth-child(2) .card-content {
+    background: linear-gradient(to bottom, rgba(55, 118, 171, 0.05), transparent);
+}
+
+/* Card border glow on hover - themed by project */
+@keyframes weatherGlow {
+    0% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(74, 177, 235, 0.3);
+    }
+    100% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px 3px rgba(74, 177, 235, 0.3);
+    }
+}
+
+@keyframes themeGlow {
+    0% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(44, 62, 80, 0.3);
+    }
+    100% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px 3px rgba(44, 62, 80, 0.3);
+    }
+}
+
+@keyframes javaGlow {
+    0% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(83, 130, 161, 0.3);
+    }
+    100% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px 3px rgba(248, 152, 32, 0.3);
+    }
+}
+
+@keyframes pythonGlow {
+    0% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(55, 118, 171, 0.3);
+    }
+    100% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px 3px rgba(255, 212, 59, 0.3);
+    }
+}
+
+#frontend-projects .project-card:nth-child(1):hover {
+    animation: weatherGlow 1.5s infinite alternate;
+}
+
+#frontend-projects .project-card:nth-child(2):hover {
+    animation: themeGlow 1.5s infinite alternate;
+}
+
+#backend-projects .project-card:nth-child(1):hover {
+    animation: javaGlow 1.5s infinite alternate;
+}
+
+#backend-projects .project-card:nth-child(2):hover {
+    animation: pythonGlow 1.5s infinite alternate;
+}
+
+/* Override the default project card glow animation */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(74, 181, 117, 0.3);
+    }
+    100% {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px 3px rgba(74, 181, 117, 0.2);
+    }
+}
+
+/* Override the default animation for project cards */
+#frontend-projects .project-card:hover,
+#backend-projects .project-card:hover {
+    animation-name: none;
 }
 
 /* Make sure project cards have a pointer cursor since they're clickable */
@@ -1671,7 +1910,7 @@ main {
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: rgba(0, 204, 102, 0.9);
+    background-color: rgba(74, 181, 117, 0.9);
     color: white;
     font-size: 0.75rem;
     font-weight: 600;

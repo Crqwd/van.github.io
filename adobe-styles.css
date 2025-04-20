@@ -1,9 +1,9 @@
 /* Adobe Showcase Styles */
 :root {
     /* Main Colors */
-    --adobe-red: #ff0000;
-    --adobe-red-dark: #cc0000;
-    --adobe-red-light: #ff3333;
+    --adobe-red: #B54A8A;
+    --adobe-red-dark: #923D70;
+    --adobe-red-light: #D66EA6;
 
     /* App-specific Colors */
     --ps-blue: #31A8FF;
@@ -198,7 +198,7 @@ nav a.active {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--dark-bg), #1a0808);
+    background: linear-gradient(135deg, var(--dark-bg), #1a0814);
     position: relative;
     overflow: hidden;
 }
@@ -275,7 +275,7 @@ nav a.active {
     height: 600px;
     top: -200px;
     right: -200px;
-    background: rgba(255, 0, 0, 0.07);
+    background: rgba(181, 74, 138, 0.07);
 }
 
 .glow-2 {
@@ -283,7 +283,7 @@ nav a.active {
     height: 500px;
     bottom: -200px;
     left: -100px;
-    background: rgba(255, 0, 0, 0.05);
+    background: rgba(181, 74, 138, 0.05);
 }
 
 .grid {
@@ -959,10 +959,11 @@ main {
     text-align: center; /* Center the image horizontally */
 }
 
+/* Video Modal specific styles */
 #video-modal {
     display: none;
-    align-items: center;
-    justify-content: center;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .modal-content {
@@ -988,7 +989,7 @@ main {
     max-width: 90%;
 }
 
-#video-modal iframe {
+#video-modal iframe, #video-modal video {
     position: absolute;
     top: 0;
     left: 0;
@@ -997,6 +998,9 @@ main {
     margin: auto;
     width: 100%;
     height: 100%;
+    background-color: black;
+    object-fit: contain; /* Ensures video maintains aspect ratio */
+    max-height: 100%; /* Ensures the video doesn't exceed the container height */
 }
 
 .modal-close {
@@ -1038,7 +1042,7 @@ main {
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: rgba(181, 74, 138, 0.8);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1057,7 +1061,7 @@ main {
 
 .project-card:hover .play-button {
     transform: translate(-50%, -50%) scale(1.1);
-    background-color: rgba(255, 0, 0, 1);
+    background-color: rgba(181, 74, 138, 1);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
 }
 
@@ -1108,7 +1112,7 @@ main {
 
 /* Collaboration Section */
 .collaboration-section {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a0808 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0814 100%);
     padding: var(--space-xxl) var(--space-xl);
     position: relative;
     overflow: hidden;
@@ -1185,7 +1189,7 @@ main {
     height: 450px;
     top: -150px;
     right: -100px;
-    background: rgba(255, 0, 0, 0.07);
+    background: rgba(181, 74, 138, 0.07);
 }
 
 .collaboration-glow-2 {
@@ -1193,7 +1197,7 @@ main {
     height: 400px;
     bottom: -150px;
     left: -50px;
-    background: rgba(255, 0, 0, 0.05);
+    background: rgba(181, 74, 138, 0.05);
 }
 
 .collaboration-grid {
